@@ -1,46 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Work - WebWise Consulting</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
+<style>
+ 
+  nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: linear-gradient(141deg, cyan 0%, rebeccapurple 40%, deeppink 90%);
+  position: fixed;
+  top: 0;
+  width: 100%;
+ 
+}
+
+nav ul li {
+  float: left;
+  /* border-right: 1px solid #bbb; */
+}
+
+nav ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  /* transition: color 0.3s ease-in-out;
+  background-color: rgb(0, 138, 140); */
+  
+}
+
+nav ul li a:hover {
+  color: #ff6600;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;  
+  max-width: fit-content;
+  margin: 0; /* Remove default margin */
+  padding: 100px;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+
+h4 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #adadad;
+  margin-bottom: 30px;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  transition: all 1s ease;
+}
+
+.slider {
+  width: 550px;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 3px;
+  box-shadow: 3px 20px 15px 0px rgba(0, 0, 0, 0.15);
+}
+
+img {
+  width: 550px;
+  height: 350px;
+  border-radius: 3px;
+}
+
+.pagination-dots {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.dot {
+  width: 20px;
+  height: 6px;
+  border-radius: 5px;
+  background-color: #d6d6d6;
+}
+
+.dot.active {
+  background-color: #fe6a5c;
+}
+</style>
+<script>
+    let currentSlide = 0;
+
+function startSlider() {
+  let imageCount = document.querySelectorAll(".slider ul img");
+  let images = document.querySelector(".slider ul");
+
+  if (imageCount.length === 0) {
+    imageCount = document.querySelectorAll("img");
+    images.style.transform = `translateX(0px)`;
+    return;
+  }
+
+  images.style.transform = `translateX(-${currentSlide * 550}px)`;
+
+  // Remove the active class from all dots
+  let dots = document.querySelectorAll(".dot");
+  dots.forEach((dot) => {
+    dot.classList.remove("active");
+  });
+
+  // Add the active class to the current dot
+  dots[currentSlide].classList.add("active");
+
+  if (currentSlide === imageCount.length - 1) {
+    currentSlide = 0;
+  } else {
+    currentSlide++;
+  }
+}
+
+setInterval(() => {
+  startSlider();
+}, 3000);
+</script>
 <body>
-  <div class="container">
-    <header>
-      <h1>WebWise Consulting</h1>
-    </header>
+  <div class="menu">
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li class="active"><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li class="active"><a href="ourwork.html">Our Work</a></li>
+        <li><a href="ourwork.html">Our Work</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="reviews.html">Reviews</a></li>
 
       </ul>
     </nav>
-    <main>
-      <h2>Our Work</h2>
-      <p>Check out some of our work done for past clients</p>
-      <table>
-        <tr>
-          <td><img src="nike.png" width="500" height="600" onclick="openPopup('nike.png')"></td>
-          <td>Nike</td>
-          <td>2003</td>
-        </tr>
-        <tr>
-          <td><img src="mcdonalds.png" width="500" height="600" onclick="openPopup('mcdonalds.png')"></td>
-          <td>McDonalds</td>
-          <td>2002</td>
-        </tr>
-      </table>
-    </main>
-    <footer>
-      <p>&copy; 2024 WebWise Consulting</p>
-    </footer>
   </div>
-  <script src="script.js"></script>
+    <div class="slider">
+        <ul>
+          <li><img src="/mcdonalds.png" alt="image one" /></li>
+          <li><img src="/Brain.jpg" alt="image two" /></li>
+          <li><img src="/nike.png" alt="image three" /></li>
+        </ul>
+      </div>
+  
+      <div class="pagination-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
 </body>
 </html>

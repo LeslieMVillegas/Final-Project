@@ -27,3 +27,37 @@ document.addEventListener('DOMContentLoaded', function() {
         popupWindow.focus();
     }
 }
+
+function startSlider() {
+  let currentSlide = 0;
+  let imageCount = document.querySelectorAll(".slider ul img");
+  let images = document.querySelector(".slider ul");
+  console.log(imageCount);
+  console.log(images);
+  if (imageCount.length === 0) {
+    imageCount = document.querySelectorAll("img");
+    images.style.transform = `translateX(0px)`;
+    return;
+  }
+
+  images.style.transform = `translateX(-${currentSlide * 550}px)`;
+
+  // Remove the active class from all dots
+  let dots = document.querySelectorAll(".dot");
+  dots.forEach((dot) => {
+    dot.classList.remove("active");
+  });
+
+  // Add the active class to the current dot
+  dots[currentSlide].classList.add("active");
+
+  if (currentSlide === imageCount.length - 1) {
+    currentSlide = 0;
+  } else {
+    currentSlide++;
+  }
+}
+
+setInterval(() => {
+  startSlider();
+}, 3000);
