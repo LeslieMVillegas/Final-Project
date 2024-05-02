@@ -3,14 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Work - WebWise Consulting</title>
+  <title>Customer Reviews</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+
+<div class="newBody">
+  <h1>Customer Reviews</h1>
+
+<section id="new-review">
+  <h2>Leave a Review</h2>
+</div>
+
+<div class="newBody3">
+<section id="new-review">
+  <form id="review-form">
+      <label for="rating">Rating:</label>
+      <select id="rating" name="rating" required>
+          <option value="">Select Rating</option>
+          <option value="1">1 Star</option>
+          <option value="2">2 Stars</option>
+          <option value="3">3 Stars</option>
+          <option value="4">4 Stars</option>
+          <option value="5">5 Stars</option>
+      </select>
+      <label for="comment">Comment:</label>
+      <textarea id="comment" name="comment" rows="4"></textarea>
+      <button type="submit">Submit Review</button>
+  </form>
+</section>
+</div>
+
+
   <div class="container">
-    <header>
-      <h1>WebWise Consulting</h1>
-    </header>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -21,31 +45,19 @@
 
       </ul>
     </nav>
-    <main>
-      <h2>Reviews</h2>
-      <p>Latest Reviews</p>
-      <table>
-        <tr>
-          <td></td>
-          <td>This site and company is cheugy AF no cap</td>
-          <td>1/5 stars</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>SHEEEEEEESH this company mid</td>
-          <td>1/5 stars</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>BIG YIKES</td>
-            <td>1/5 stars</td>
-          </tr>
-      </table>
-    </main>
-    <footer>
-      <p>&copy; 2024 WebWise Consulting</p>
-    </footer>
+
+  <div class="newBody4">
+  <main id="review-container">
+      <!-- Reviews will be dynamically added here -->
+  </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Centals Consulting</p>
+  </footer>
   </div>
   <script src="script.js"></script>
 </body>
 </html>
+
+
