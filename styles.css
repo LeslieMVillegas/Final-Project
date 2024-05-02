@@ -58,6 +58,7 @@ MainContent {
   font-style: normal; */
  }
 
+<<<<<<< Updated upstream
 
  h1{
   font-family: "Ubuntu", sans-serif;
@@ -79,6 +80,8 @@ MainContent {
   color: #ffffff;
  }
  
+=======
+>>>>>>> Stashed changes
 /* Navigation styles */
 nav ul {
   list-style-type: none;
@@ -135,7 +138,11 @@ main p {
 footer {
   margin-top: 50px;
   font-size: 14px;
+<<<<<<< Updated upstream
   color: #eeeeee;
+=======
+  color: #666666;
+>>>>>>> Stashed changes
 }
 
 /* Animation */
