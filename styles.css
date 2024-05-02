@@ -72,10 +72,9 @@ MainContent {
   color: rgb(29, 159, 60);
  }
  p{
-  margin-top: 10px;
   font-family: "Ubuntu", sans-serif;
-  font-weight: 40;
-  font-size:large;
+  font-weight: 50;
+  font-size:xx-large;
   font-style: italic;
   color: #ffffff;
  }
@@ -206,13 +205,13 @@ input[type=submit] {
   color: white;
   padding: 12px 20px;
   border: none;
-  border-radius: 2px;
+  border-radius: 4px;
   cursor: pointer;
 }
 
 /* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
-  background-color: #820b64;
+  background-color: #45a049;
 }
 
 /* Add a background color and some padding around the form */
@@ -228,3 +227,49 @@ label {
   font-family: "Ubuntu", sans-serif;
 
 }
+
+.review {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.stars {
+  display: inline-block;
+}
+
+.stars span {
+  color: gold;
+}
+
+
+.newBody{
+  margin-top: 50px;
+  max-width: 95%;
+  font-size: 25px;
+  font-family: "Ubuntu", sans-serif;
+
+ }
+ .newBody h2{
+  max-width: 80%;
+  font-size: 25px;
+  font-family: "Ubuntu", sans-serif;
+ }
+
+ .newBody3{
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 26px;
+  margin-bottom: 60px;
+ }
+
+ .newBody4{
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  font-size: 26px;
+  margin-bottom: 20px;
+ }

@@ -9,9 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
       header.style.color = randomColor;
     });
   });
-  function SendForm(){
-    alert("Form Submitted");
-  };
   
   function openPopup(imageUrl) {
     // Specify the width and height of the popup window
@@ -35,8 +32,8 @@ function startSlider() {
   let currentSlide = 0;
   let imageCount = document.querySelectorAll(".slider ul img");
   let images = document.querySelector(".slider ul");
-  //console.log(imageCount);
- // console.log(images);
+  console.log(imageCount);
+  console.log(images);
   if (imageCount.length === 0) {
     imageCount = document.querySelectorAll("img");
     images.style.transform = `translateX(0px)`;
@@ -65,3 +62,61 @@ setInterval(() => {
   startSlider();
 }, 3000);
 
+
+document.addEventListener('DOMContentLoaded', function() {
+  const reviewContainer = document.getElementById('review-container');
+  const reviewForm = document.getElementById('review-form');
+
+  const reviews = [
+      { rating: 5, comment: "Outstanding work! Highly recommended." },
+      { rating: 1, comment: "Absolutely shite job. Never using this site again." },
+      { rating: 4, comment: "LOVE LOVE LOVE. Contributed to more satisfied costomers:)" },
+      { rating: 2, comment: "Mediocre performance, just mediocre." },
+      { rating: 3, comment: "Good work overall, but could be better." }
+  ]
+
+  // Function to generate stars based on rating
+  function generateStars(rating) {
+      const filledStars = '⭐'.repeat(rating);
+      const emptyStars = '☆'.repeat(5 - rating);
+      return filledStars + emptyStars;
+  }
+
+  // Function to add a new review
+  function addNewReview(event) {
+      event.preventDefault();
+
+      const rating = parseInt(document.getElementById('rating').value);
+      const comment = document.getElementById('comment').value;
+
+      const reviewElement = document.createElement('div');
+      reviewElement.classList.add('review');
+      
+      const stars = generateStars(rating);
+
+      reviewElement.innerHTML = `
+          <p class="stars">${stars}</p>
+          <p>${comment}</p>
+      `;
+
+      reviewContainer.insertBefore(reviewElement, reviewContainer.firstChild);
+      reviewForm.reset();
+  }
+
+  reviewForm.addEventListener('submit', addNewReview);
+
+  // Display existing reviews
+  reviews.forEach(review => {
+      const reviewElement = document.createElement('div');
+      reviewElement.classList.add('review');
+
+      const stars = generateStars(review.rating);
+
+      reviewElement.innerHTML = `
+          <p class="stars">${stars}</p>
+          <p>${review.comment}</p>
+      `;
+
+      reviewContainer.appendChild(reviewElement);
+  });
+});
