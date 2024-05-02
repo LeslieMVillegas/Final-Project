@@ -9,6 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
       header.style.color = randomColor;
     });
   });
+  function SendForm(){
+    alert("Form Submitted");
+  };
   
   function openPopup(imageUrl) {
     // Specify the width and height of the popup window
@@ -32,8 +35,8 @@ function startSlider() {
   let currentSlide = 0;
   let imageCount = document.querySelectorAll(".slider ul img");
   let images = document.querySelector(".slider ul");
-  console.log(imageCount);
-  console.log(images);
+  //console.log(imageCount);
+ // console.log(images);
   if (imageCount.length === 0) {
     imageCount = document.querySelectorAll("img");
     images.style.transform = `translateX(0px)`;
@@ -61,3 +64,4 @@ function startSlider() {
 setInterval(() => {
   startSlider();
 }, 3000);
+
