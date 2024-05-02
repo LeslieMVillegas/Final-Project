@@ -34,6 +34,40 @@ header h1 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+<<<<<<< Updated upstream
+=======
+
+ h1{
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color:rgb(255, 255, 255);
+ }
+ h2{
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  color: rgb(29, 159, 60);
+ }
+
+ h3{
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  color: rgb(29, 159, 60);
+  margin-top: 20px;
+ }
+
+ p{
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 50;
+  font-size:large;
+  font-style: italic;
+  color: #ffffff;
+  margin-top: 20px;
+ }
+ 
+>>>>>>> Stashed changes
 /* Navigation styles */
 nav ul {
   list-style-type: none;
@@ -60,6 +94,8 @@ nav ul li a:hover {
 /* Main content styles */
 main {
   padding: 20px 0;
+  margin-top: 20px; /* Add space between header and main content */
+  
 }
 
 main h2 {
@@ -77,8 +113,15 @@ main p {
 footer {
   margin-top: 50px;
   font-size: 14px;
+<<<<<<< Updated upstream
   color: #666666;
+=======
+  text-align: center;
+  color: #eeeeee;
+>>>>>>> Stashed changes
 }
+
+
 
 /* Animation */
 @keyframes fadeIn {
