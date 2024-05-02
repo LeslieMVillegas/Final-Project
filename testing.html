@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
 </head>
 <style>
- 
- 
 
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fbfbfb;
+}
 
 h4 {
   font-size: 26px;
@@ -18,7 +24,7 @@ h4 {
   margin-bottom: 30px;
 }
 
-.slider ul {
+ul {
   display: flex;
   list-style: none;
   transition: all 1s ease;
@@ -32,7 +38,7 @@ h4 {
   box-shadow: 3px 20px 15px 0px rgba(0, 0, 0, 0.15);
 }
 
-.slider img {
+img {
   width: 550px;
   height: 350px;
   border-radius: 3px;
@@ -60,8 +66,8 @@ h4 {
     let currentSlide = 0;
 
 function startSlider() {
-  let imageCount = document.querySelectorAll(".slider ul img");
-  let images = document.querySelector(".slider ul");
+  let imageCount = document.querySelectorAll("img");
+  let images = document.querySelector("ul");
 
   if (imageCount.length === 0) {
     imageCount = document.querySelectorAll("img");
@@ -92,18 +98,6 @@ setInterval(() => {
 }, 3000);
 </script>
 <body>
-  <div class="menu">
-    <nav>
-      <ul>
-        <li class="active"><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="ourwork.html">Our Work</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="reviews.html">Reviews</a></li>
-
-      </ul>
-    </nav>
-  </div>
     <div class="slider">
         <ul>
           <li><img src="/mcdonalds.png" alt="image one" /></li>
