@@ -71,13 +71,14 @@ MainContent {
   font-weight: 500;
   font-style: italic;
   color: rgb(29, 159, 60);
+  font-family: 'Times New Roman', Times, serif;
  }
  p{
   font-family: "Ubuntu", sans-serif;
-  font-weight: 50;
-  font-size:xx-large;
+  font-weight: 30;
+  font-size:medium;
   font-style: italic;
-  color: #ffffff;
+  color: #7f9681;
  }
  
 =======
@@ -188,3 +189,88 @@ body {
   align-items: center;
   height: 100vh;
 }
+
+.service-packages {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.package {
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 30%;
+  text-align: center;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.package:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.package h3 {
+  color: #50C878;
+  margin-top: 0;
+  font-family: 'Times New Roman', Times, serif;
+}
+}
+
+.package p {
+  color: #666;
+}
+body {
+  font-family: 'Arial', sans-serif; /* This is a placeholder, consider a modern font like 'Roboto' or 'Open Sans' */
+  color: #240b0b;
+  background-color: #14010f;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  margin-right: 20px;
+}
+
+h1 {
+  color: #fff;
+  font-size: 24px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  font-family: 'Times New Roman', Times, serif;
+
+}
+
+nav {
+  margin-left: auto;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 15px;
+}
+
+nav ul li a {
+  color: #50C878;
+  text-decoration: none;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #50C878; /* a modern shade of green */
+}
+
+/* Add more styling rules here to suit your design */
