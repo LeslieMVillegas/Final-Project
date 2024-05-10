@@ -141,6 +141,13 @@ footer {
 }
 
 
+body {
+	background: #e965bb;
+	padding: 0;
+	margin: 0;
+  /* overflow: hidden; */
+}
+
 
 .text {
 
