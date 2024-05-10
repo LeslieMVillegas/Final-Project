@@ -169,7 +169,7 @@ footer {
 /* Style the submit button with a specific background color etc */
 input[type=submit] {
    font-family: "Ubuntu", sans-serif;
-  background-color: #04AA6D;
+  background-color: #0404aa;
   color: #ffffff;
   padding: 12px 20px;
   border: none;
@@ -179,7 +179,7 @@ input[type=submit] {
 
 /* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
-  background-color: #45a049;
+  background-color: #010fab;
 }
 
 /* Add a background color and some padding around the form */
@@ -201,7 +201,7 @@ label {
   border-radius: 5px;
   padding: 20px;
   margin-bottom: 20px;
-  background-color: #ca1212;
+  background-color: #0c005c;
   -webkit-text-fill-color: aliceblue;
 }
 
@@ -274,4 +274,105 @@ label {
 
 .package p {
   color: #666;
+}
+#confirmationMessage {
+  color: white;
+  background-color: #1000c5; /* Green background */
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: none; /* Hidden by default */
+  text-align: center;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+#confirmationMessage {
+  animation: fadeIn 1s ease-in-out;
+}
+/* Overlay styles */
+#overlay {
+  position: fixed; /* Positioning relative to the viewport */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  display: none; /* Hidden by default */
+  z-index: 1000; /* High z-index to ensure it's above other content */
+}
+
+/* Confirmation message styles */
+#confirmationMessage {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the div */
+  width: 50%; /* Width of the message box */
+  max-width: 600px; /* Maximum width */
+  padding: 20px;
+  background-color: #ffffff; /* White background for the box */
+  color: #333; /* Dark text color */
+  text-align: center;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  display: none; /* Hidden by default */
+  z-index: 1001; /* Higher z-index than the overlay */
+}
+
+/* Example button to close the message (optional) */
+#closeButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.image-gallery {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+  padding: 10px;
+}
+
+.image-gallery a {
+  text-decoration: none;
+  color: #fff; /* Update based on your text color needs */
+}
+
+.image-gallery figure {
+  margin: 10px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px; /* Optional rounded corners */
+}
+
+.image-gallery img {
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.image-gallery figcaption {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: background-color 0.5s ease;
+}
+
+.image-gallery a:hover img {
+  transform: scale(1.1);
+}
+
+.image-gallery a:hover figcaption {
+  background-color: rgba(0, 0, 0, 0.8);
 }

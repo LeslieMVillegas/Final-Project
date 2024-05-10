@@ -31,16 +31,16 @@
       </ul>
     </nav>
     <main>
-    <h1 id="header">CONTACT US!</h1>
+    <h1 id="header">Book Plan ...</h1>
 
       <div class="containerform">
-        <form>
+        <form id="contactForm" onsubmit="return false;">
       
-          <label for="fname">First Name</label>
-          <input type="text" id="fname" name="firstname" placeholder="Your name..">
-      
-          <label for="lname">Last Name</label>
-          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          <input type="text" id="selectedPlan" name="plan" value="">
+          <label for="fname">Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name...">
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email" placeholder="Your email...">
       
           <label for="country">Country</label>
           <select id="country" name="country">
@@ -53,11 +53,19 @@
           <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
       
           <input type="submit" value="Submit" onclick="SendForm()">
-      
+
         </form>
+        <div id="overlay"></div>
+        <div id="confirmationMessage">
+          Thank you for using Fractals. We will be reaching out very soon to book an appointment. Keep an eye on your emails.
+          <button id="closeButton" onclick="closeConfirmation()">Close</button>
+        </div>
+        
       </div> 
     </footer>
   </div>
+
+  
   <script src="script.js"></script>
 </body>
 </html>

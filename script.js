@@ -120,3 +120,85 @@ document.addEventListener('DOMContentLoaded', function() {
       reviewContainer.appendChild(reviewElement);
   });
 });
+function selectPlan(planName) {
+  localStorage.setItem('selectedPlan', planName);
+  window.location.href = 'contact.html';
+}
+document.addEventListener('DOMContentLoaded', function() {
+  var selectedPlan = localStorage.getItem('selectedPlan');
+  if (selectedPlan) {
+    document.getElementById('selectedPlan').value = selectedPlan;
+  }
+});
+function sendForm() {
+  // Collect data from the form
+  const formData = {
+    name: document.getElementById('fname').value,
+    email: document.getElementById('email').value,
+    country: document.getElementById('country').value,
+    subject: document.getElementById('subject').value,
+    plan: document.getElementById('selectedPlan').value
+  };
+
+  // Here you would normally send the data to a server
+  // Assuming the data is sent and you receive a successful response:
+  
+  console.log("Form Data Submitted: ", formData); // Remove in production
+  
+  // Display the confirmation message
+  document.getElementById('confirmationMessage').style.display = 'block';
+  
+  // Optionally, clear the form or disable the submit button
+  document.getElementById('contactForm').reset();
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const contactForm = document.getElementById('contactForm');
+  var selectedPlan = localStorage.getItem('selectedPlan');
+  
+  if (selectedPlan) {
+    document.getElementById('selectedPlan').value = selectedPlan;
+  }
+
+  contactForm.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission behavior
+
+    const formData = {
+      name: document.getElementById('fname').value,
+      email: document.getElementById('email').value,
+      country: document.getElementById('country').value,
+      subject: document.getElementById('subject').value,
+      plan: document.getElementById('selectedPlan').value
+    };
+
+    console.log("Form Data Submitted:", formData); // Debug: See the collected form data
+
+    // Display the confirmation message
+    document.getElementById('confirmationMessage').style.display = 'block';
+    
+    // Optional: Clear the form or disable further submissions
+    // contactForm.reset();
+  });
+});
+function showConfirmation() {
+  document.getElementById('overlay').style.display = 'block';
+  document.getElementById('confirmationMessage').style.display = 'block';
+}
+
+function closeConfirmation() {
+  document.getElementById('overlay').style.display = 'none';
+  document.getElementById('confirmationMessage').style.display = 'none';
+  
+  // Redirect after a short delay
+  setTimeout(function() {
+    window.location.href = 'index.html';
+  }, 500);  // Delay of 500 milliseconds
+}
+
+
+// Adjust the existing form submission handler to call showConfirmation
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  // Handle form data submission here
+  showConfirmation(); // Show the confirmation message
+});
