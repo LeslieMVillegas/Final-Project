@@ -14,11 +14,11 @@
 body {
   font-family: 'Ubuntu';
   background-image: url('logo.png');  /* Sets the background image */
-  background-color: #050606;          /* Fallback color if the image fails to load */
+  background-color: #07012d;          /* Fallback color if the image fails to load */
   background-size: cover;             /* Scales the background image to cover the entire area */
   background-position: center;        /* Centers the background image */
-  background-repeat: repeat;       /* Prevents the background image from repeating */
-  color: #933d3d;
+  background-repeat: no-repeat;       /* Prevents the background image from repeating */
+  color: #ffffff;
   margin: 0;                          /* Resets margin */
   padding: 0;                         /* Resets padding */
 }
@@ -35,7 +35,7 @@ nav ul li a{
 
 }
  h1, h2, p{
-  color:#933d3d
+  color:#ffffff
  }
  h1{
   font-weight: 700;
@@ -46,7 +46,7 @@ nav ul li a{
  p{
   font-weight: 50;
   font: size 16px;
-  color: #933d3d;
+  color: #ffffff;
  }
  
 
@@ -71,7 +71,7 @@ nav ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background: linear-gradient(141deg, rgb(194, 212, 233) 0%, rgb(74, 97, 107) 40%, rgb(60, 20, 11) 90%);
+  background: linear-gradient(141deg, rgba(198, 15, 15, 0.926) 0%, rgb(43, 54, 78) 40%, rgb(1, 1, 91) 90%);
   position: fixed;
   top: 0;
   width: 100%;
@@ -108,12 +108,12 @@ main {
 
 main h2 {
   font-size: 28px;
-  color: #933d3d;
+  color: #ffffff;
   margin-bottom: 20px;
 }
 
 main p {
-  color: #933d3d;
+  color: #ffffff;
   line-height: 1.6;
 }
 
@@ -121,7 +121,7 @@ main p {
 footer {
   margin-top: 50px;
   font-size: 14px;
-  color: #933d3d;
+  color: #ffffff;
 }
 
 /* Animation */
@@ -140,13 +140,6 @@ footer {
   animation: fadeIn 1s ease-out forwards;
 }
 
-
-body {
-	background: #e965bb;
-	padding: 0;
-	margin: 0;
-  /* overflow: hidden; */
-}
 
 
 .text {
@@ -177,7 +170,7 @@ body {
 input[type=submit] {
    font-family: "Ubuntu", sans-serif;
   background-color: #04AA6D;
-  color: #933d3d;
+  color: #ffffff;
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
@@ -198,7 +191,7 @@ input[type=submit]:hover {
 } 
 
 label {
-  color: #933d3d;
+  color: #ffffff;
   font-family: "Ubuntu", sans-serif;
 
 }
