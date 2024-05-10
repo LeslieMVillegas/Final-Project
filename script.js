@@ -195,10 +195,3 @@ function closeConfirmation() {
   }, 500);  // Delay of 500 milliseconds
 }
 
-
-// Adjust the existing form submission handler to call showConfirmation
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-  event.preventDefault();
-  // Handle form data submission here
-  showConfirmation(); // Show the confirmation message
-});
