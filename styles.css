@@ -201,7 +201,7 @@ label {
   border-radius: 5px;
   padding: 20px;
   margin-bottom: 20px;
-  background-color: #4b4848;
+  background-color: #ca1212;
   -webkit-text-fill-color: aliceblue;
 }
 
@@ -243,3 +243,35 @@ label {
   font-size: 26px;
   margin-bottom: 20px;
  }
+
+.service-packages {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.package {
+  border: 1px solid #ab0000;
+  padding: 20px;
+  width: 30%;
+  text-align: center;
+  background-color: #140289;
+  box-shadow: 0 4px 8px rgba(244, 48, 48, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.package:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(239, 0, 0, 0.15);
+}
+
+.package h3 {
+  color: #ffeded;
+  margin-top: 0;
+  font-family: 'Ubuntu';
+}
+}
+
+.package p {
+  color: #666;
+}
