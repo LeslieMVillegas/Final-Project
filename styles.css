@@ -10,39 +10,46 @@
 
 
 /* Body styles */
-MainContent {
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f19d9d;  
+
+body {
+  font-family: 'Ubuntu';
+  background-image: url('logo.png');  /* Sets the background image */
+  background-color: #050606;          /* Fallback color if the image fails to load */
+  background-size: cover;             /* Scales the background image to cover the entire area */
+  background-position: center;        /* Centers the background image */
+  background-repeat: repeat;       /* Prevents the background image from repeating */
+  color: #933d3d;
+  margin: 0;                          /* Resets margin */
+  padding: 0;                         /* Resets padding */
 }
 
-/* Container styles */
-/* .container {
-  max-width: 800px;
-  margin: 50px auto;
-  background-color: #000000;
-  padding: 20px;
-  border: 2px solid #ff4242;
-  border-radius: 20px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  font-family: Arial, sans-serif;
+MainContent {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #000000;
-} */
-
-/* Header styles */
-/* header h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  color: #563232;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-} */
+  background-color: #f85858;  
+}
+nav ul li a{
+  font-weight: 700;
  
+
+}
+ h1, h2, p{
+  color:#933d3d
+ }
+ h1{
+  font-weight: 700;
+ }
+ h2{
+  font-style: normal;
+ }
+ p{
+  font-weight: 50;
+  font: size 16px;
+  color: #933d3d;
+ }
+ 
+
   .newBody{
     
   max-width: fit-content;
@@ -57,27 +64,6 @@ MainContent {
   font-weight: 300;
   font-style: normal; */
  }
-
-
- h1{
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  color:rgb(255, 255, 255);
- }
- h2{
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 500;
-  font-style: italic;
-  color: rgb(29, 159, 60);
- }
- p{
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 50;
-  font-size:xx-large;
-  font-style: italic;
-  color: #ffffff;
- }
  
 /* Navigation styles */
 nav ul {
@@ -85,7 +71,7 @@ nav ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background: linear-gradient(141deg, cyan 0%, rebeccapurple 40%, deeppink 90%);
+  background: linear-gradient(141deg, rgb(194, 212, 233) 0%, rgb(74, 97, 107) 40%, rgb(60, 20, 11) 90%);
   position: fixed;
   top: 0;
   width: 100%;
@@ -99,7 +85,7 @@ nav ul li {
 
 nav ul li a {
   display: block;
-  color: white;
+  color: #ffffff;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -122,12 +108,12 @@ main {
 
 main h2 {
   font-size: 28px;
-  color: #eeeeee;
+  color: #933d3d;
   margin-bottom: 20px;
 }
 
 main p {
-  color: #eeeeee;
+  color: #933d3d;
   line-height: 1.6;
 }
 
@@ -135,7 +121,7 @@ main p {
 footer {
   margin-top: 50px;
   font-size: 14px;
-  color: #eeeeee;
+  color: #933d3d;
 }
 
 /* Animation */
@@ -155,24 +141,6 @@ footer {
 }
 
 
-body {
-	background: #222;
-	padding: 0;
-	margin: 0;
-  /* overflow: hidden; */
-}
-
-
-
-/* h1 {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  color: white;
-  font-size: 4vw;
-  font-weight: 300;
-	text-transform: uppercase;
-} */
 
 .text {
 
@@ -202,7 +170,7 @@ body {
 input[type=submit] {
    font-family: "Ubuntu", sans-serif;
   background-color: #04AA6D;
-  color: white;
+  color: #933d3d;
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
@@ -223,16 +191,18 @@ input[type=submit]:hover {
 } 
 
 label {
-  color: #ffffff;
+  color: #933d3d;
   font-family: "Ubuntu", sans-serif;
 
 }
 
 .review {
-  border: 1px solid #ccc;
+  border: 1px solid #030303;
   border-radius: 5px;
   padding: 20px;
   margin-bottom: 20px;
+  background-color: #4b4848;
+  -webkit-text-fill-color: aliceblue;
 }
 
 .stars {
