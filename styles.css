@@ -150,7 +150,10 @@ footer {
   height: 100vh;
 }
 
-
+main p {
+  font-family: "Ubuntu", sans-serif;
+  font-weight:bolder;
+}
 
 /* FOR FORM */
  /* Style inputs with type="text", select elements and textareas */
@@ -348,6 +351,8 @@ label {
 .image-gallery figure {
   margin: 10px;
   position: relative;
+  height:440px;
+  width: 350px;
   overflow: hidden;
   border-radius: 10px; /* Optional rounded corners */
 }
