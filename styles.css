@@ -10,39 +10,46 @@
 
 
 /* Body styles */
-MainContent {
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f19d9d;  
+
+body {
+  font-family: 'Ubuntu';
+  background-image: url('logo.png');  /* Sets the background image */
+  background-color: #07012d;          /* Fallback color if the image fails to load */
+  background-size: cover;             /* Scales the background image to cover the entire area */
+  background-position: center;        /* Centers the background image */
+  background-repeat: no-repeat;       /* Prevents the background image from repeating */
+  color: #ffffff;
+  margin: 0;                          /* Resets margin */
+  padding: 0;                         /* Resets padding */
 }
 
-/* Container styles */
-/* .container {
-  max-width: 800px;
-  margin: 50px auto;
-  background-color: #000000;
-  padding: 20px;
-  border: 2px solid #ff4242;
-  border-radius: 20px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  font-family: Arial, sans-serif;
+MainContent {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #000000;
-} */
-
-/* Header styles */
-/* header h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  color: #563232;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-} */
+  background-color: #f85858;  
+}
+nav ul li a{
+  font-weight: 700;
  
+
+}
+ h1, h2, p{
+  color:#ffffff
+ }
+ h1{
+  font-weight: 700;
+ }
+ h2{
+  font-style: normal;
+ }
+ p{
+  font-weight: 50;
+  font: size 16px;
+  color: #ffffff;
+ }
+ 
+
   .newBody{
     
   max-width: fit-content;
@@ -57,27 +64,6 @@ MainContent {
   font-weight: 300;
   font-style: normal; */
  }
-
-
- h1{
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  color:rgb(255, 255, 255);
- }
- h2{
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 500;
-  font-style: italic;
-  color: rgb(29, 159, 60);
- }
- p{
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 50;
-  font-size:xx-large;
-  font-style: italic;
-  color: #ffffff;
- }
  
 /* Navigation styles */
 nav ul {
@@ -85,7 +71,7 @@ nav ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background: linear-gradient(141deg, cyan 0%, rebeccapurple 40%, deeppink 90%);
+  background: linear-gradient(141deg, rgba(198, 15, 15, 0.926) 0%, rgb(43, 54, 78) 40%, rgb(1, 1, 91) 90%);
   position: fixed;
   top: 0;
   width: 100%;
@@ -99,7 +85,7 @@ nav ul li {
 
 nav ul li a {
   display: block;
-  color: white;
+  color: #ffffff;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -122,12 +108,12 @@ main {
 
 main h2 {
   font-size: 28px;
-  color: #eeeeee;
+  color: #ffffff;
   margin-bottom: 20px;
 }
 
 main p {
-  color: #eeeeee;
+  color: #ffffff;
   line-height: 1.6;
 }
 
@@ -135,7 +121,7 @@ main p {
 footer {
   margin-top: 50px;
   font-size: 14px;
-  color: #eeeeee;
+  color: #ffffff;
 }
 
 /* Animation */
@@ -155,24 +141,6 @@ footer {
 }
 
 
-body {
-	background: #222;
-	padding: 0;
-	margin: 0;
-  /* overflow: hidden; */
-}
-
-
-
-/* h1 {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  color: white;
-  font-size: 4vw;
-  font-weight: 300;
-	text-transform: uppercase;
-} */
 
 .text {
 
@@ -182,7 +150,10 @@ body {
   height: 100vh;
 }
 
-
+main p {
+  font-family: "Ubuntu", sans-serif;
+  font-weight:bolder;
+}
 
 /* FOR FORM */
  /* Style inputs with type="text", select elements and textareas */
@@ -201,8 +172,8 @@ body {
 /* Style the submit button with a specific background color etc */
 input[type=submit] {
    font-family: "Ubuntu", sans-serif;
-  background-color: #04AA6D;
-  color: white;
+  background-color: #0404aa;
+  color: #ffffff;
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
@@ -211,7 +182,7 @@ input[type=submit] {
 
 /* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
-  background-color: #45a049;
+  background-color: #010fab;
 }
 
 /* Add a background color and some padding around the form */
@@ -229,10 +200,12 @@ label {
 }
 
 .review {
-  border: 1px solid #ccc;
+  border: 1px solid #030303;
   border-radius: 5px;
   padding: 20px;
   margin-bottom: 20px;
+  background-color: #0c005c;
+  -webkit-text-fill-color: aliceblue;
 }
 
 .stars {
@@ -273,3 +246,138 @@ label {
   font-size: 26px;
   margin-bottom: 20px;
  }
+
+.service-packages {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.package {
+  border: 1px solid #ab0000;
+  padding: 20px;
+  width: 30%;
+  text-align: center;
+  background-color: #140289;
+  box-shadow: 0 4px 8px rgba(244, 48, 48, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.package:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(239, 0, 0, 0.15);
+}
+
+.package h3 {
+  color: #ffeded;
+  margin-top: 0;
+  font-family: 'Ubuntu';
+}
+}
+
+.package p {
+  color: #666;
+}
+#confirmationMessage {
+  color: white;
+  background-color: #1000c5; /* Green background */
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: none; /* Hidden by default */
+  text-align: center;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+#confirmationMessage {
+  animation: fadeIn 1s ease-in-out;
+}
+/* Overlay styles */
+#overlay {
+  position: fixed; /* Positioning relative to the viewport */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  display: none; /* Hidden by default */
+  z-index: 1000; /* High z-index to ensure it's above other content */
+}
+
+/* Confirmation message styles */
+#confirmationMessage {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the div */
+  width: 50%; /* Width of the message box */
+  max-width: 600px; /* Maximum width */
+  padding: 20px;
+  background-color: #ffffff; /* White background for the box */
+  color: #333; /* Dark text color */
+  text-align: center;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  display: none; /* Hidden by default */
+  z-index: 1001; /* Higher z-index than the overlay */
+}
+
+/* Example button to close the message (optional) */
+#closeButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.image-gallery {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+  padding: 10px;
+}
+
+.image-gallery a {
+  text-decoration: none;
+  color: #fff; /* Update based on your text color needs */
+}
+
+.image-gallery figure {
+  margin: 10px;
+  position: relative;
+  height:440px;
+  width: 350px;
+  overflow: hidden;
+  border-radius: 10px; /* Optional rounded corners */
+}
+
+.image-gallery img {
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.image-gallery figcaption {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: background-color 0.5s ease;
+}
+
+.image-gallery a:hover img {
+  transform: scale(1.1);
+}
+
+.image-gallery a:hover figcaption {
+  background-color: rgba(0, 0, 0, 0.8);
+}
